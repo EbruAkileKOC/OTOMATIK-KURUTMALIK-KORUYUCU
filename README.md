@@ -1,7 +1,10 @@
 # OTOMATIK-KURUTMALIK-KORUYUCU
-Bu bir Gömülü Sistemler Dersi Projesidir.	
+Bu bir Gömülü Sistemler Dersi Projesidir.
+	
 Kullanılan Dil= TURKCE.		
-Ardunio ile yapılmıştır.	
+	
+Ardunio ile yapılmıştır.
+	
 ___________________________________________________________
 # Proje Hakkında
 Sorun 		: Evin dışındaki kurutmalık veya balkondaki kurutmalıklara astığımız çamaşırların evde 
