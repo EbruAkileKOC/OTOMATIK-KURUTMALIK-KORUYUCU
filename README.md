@@ -1,9 +1,11 @@
 # OTOMATIK-KURUTMALIK-KORUYUCU
 Bu bir Gömülü Sistemler Dersi Projesidir.
 	
+Ardunio ile yapılmıştır.
+	
 Kullanılan Dil= TURKCE.		
 	
-Ardunio ile yapılmıştır.
+
 	
 ___________________________________________________________
 # Proje Hakkında
