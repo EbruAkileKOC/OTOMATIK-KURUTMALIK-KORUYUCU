@@ -3,7 +3,7 @@ Bu bir Gömülü Sistemler Dersi Projesidir.
 	
 Ardunio ile yapılmıştır.
 	
-Kullanılan Dil= TURKCE.		
+Kullanılan Dil => Türkçe		
 	
 
 	
