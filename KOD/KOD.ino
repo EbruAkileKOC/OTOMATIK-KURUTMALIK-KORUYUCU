@@ -27,7 +27,7 @@ void loop() {
   digitalWrite(in1,LOW);
   
   }
-  if else(digitalRead(Buton)== 1){
+  if else(digitalRead(Buton)== 1 && okunan==true){
     Serial.println("yagmur yok");
     digitalWrite(in2,HIGH);
     analogWrite(enA,50);
