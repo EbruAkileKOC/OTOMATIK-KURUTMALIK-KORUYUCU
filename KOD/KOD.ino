@@ -3,6 +3,7 @@ int sensor=8;
 int in1=7;
 int in2=9;
 int enA=6;
+int val=0;
 
 void setup() {
   pinMode(in1,OUTPUT);  // pinlerin giriş veya çıkış olma durumları tanımlamaları
@@ -16,31 +17,44 @@ void setup() {
  digitalWrite(enA,HIGH);
 }
 
-void loop() {
 
+void loop() {
+val=map( analogRead(A0),0,1023,0,255);
  if(digitalRead(sensor)==false){  // Rain sensörden gelen bilgiyi karşılaştırma.
+  val=map( analogRead(A0),0,1023,0,255); // Hız ayarını manuel yapabilmek için potansiyometreden bilgi alıyoruz.
   Serial.println("yagmur var");  // yağmur varsa motor ileri yöde çalışır ve bir motora bağlanmış mil üzerine sarılı olan sıvı geçirmez perde yavaş hızla açılır.
   digitalWrite(in1,HIGH);
-  analogWrite(enA,50);
-  delay(2000);                 // 2 dakikada tamamen açılır ve motor durur.
-  analogWrite(enA,0);
+  analogWrite(enA,val);
+  delay(5000);                 // 5 saniyede tamamen açılır ve motor durur.
+  analogWrite(enA,val);
   digitalWrite(in1,LOW);
-  
-  }
-  if else(digitalRead(Buton)== 1 ){  // Butona basılı tutulduğu sürece motor geri yönde çalışıyor.
-    Serial.println("yagmur yok");
+  if(digitalRead(Buton)== 1 ){ // Butona basılınca  motor geri yönde çalışıyor.
+    val=map( analogRead(A0),0,1023,0,255);
+    Serial.println("buton basıldı");
     digitalWrite(in1,LOW);  // motor ileri yönde çalışırken butona basılırsa diye alınmış bir önlem.
     analogWrite(in1,0);
     digitalWrite(in2,HIGH);
-    analogWrite(enA,50);
-    
-    }
-  if else(digitalRead(Buton)== 0){  // Butona basılmazsa motor duruyor.
+    analogWrite(enA,val);
+    delay(5000);          // 5 saniyede tamamen kapanır ve motor durur.
+    analogWrite(enA,val);
     digitalWrite(in2,LOW);
-    analogWrite(enA,0);
-    
-    }  
+  }
   
+ while(digitalRead(sensor)==false);
+  
+  
+  }
+  else if(digitalRead(Buton)== 1 ){  // Butona basılınca  motor geri yönde çalışıyor.
+    val=map( analogRead(A0),0,1023,0,255);
+    Serial.println("buton basildi");
+    digitalWrite(in1,LOW);  // motor ileri yönde çalışırken butona basılırsa diye alınmış bir önlem.
+    analogWrite(in1,0);
+    digitalWrite(in2,HIGH);
+    analogWrite(enA,val);
+    delay(50000);
+    analogWrite(enA,val);
+    digitalWrite(in2,LOW);
+  }
   
   
 }
