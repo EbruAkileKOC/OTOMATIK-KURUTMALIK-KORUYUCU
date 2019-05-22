@@ -15,3 +15,8 @@ Sorun 		: Evin dışındaki kurutmalık veya balkondaki kurutmalıklara astığ�
 Çözüm 		: Kurutmalığın olduğu yere rulo halinde sıvı geçirmez bir kumaş koyulacak, rula halindeki kumaş motor vasıtasıyla
 		        açılabilecek, yağmur yağdığında yağmur algılama sensörü yardımı ile durum belirlenecek ve rulo halindeki kumaş açılacak
 		        böylelikle yağmur yağdığında çamaşırların yağmur suyuyla ıslanarak kokması gibi bir durum olmayacak. 
+
+
+_______________________________________________________________________________
+
+Video'ya https://youtu.be/LDZNhm7ZePs  adresinden ulaşabilirsiniz.
